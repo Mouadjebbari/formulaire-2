@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Formulaire d'insription</h1>
+            <div class="input-control">
+                <label for="username">Nom</label>
+                <input onclick="  validateInputs()" id="username" name="username" type="text" >
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="username2">Prénom</label>
+                <input onclick="  validateInputs()" id="username2" name="username2" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input  onclick="  validateInputs()"  id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="telephone">Télephone</label>
+                <input   onclick="  validateInputs()" id="telephone" name="telephone" type="text">
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control4">
+                <label for="Genre">Genre : </label><br>
+                <label for="fam">Féminin</label>
+                <input   onclick="  validateInputs()" id="fam" name="fam"  type="radio"  >
+                <label for="mas">Masculin</label>
+                <input  onclick="  validateInputs()" id="mas" name="fam" type="radio" >
+                <div id="error"></div>
+            </div>
+            <div class="input-control3">
+                <label for="group">Groupe : </label><br>
+                <label for="group1">DW101</label>
+                <input onclick="  validateInputs()"  id="group1" name="group" type="radio" >
+                <label for="group2">DW102</label>
+                <input onclick="  validateInputs()"  id="group2" name="group" type="radio" >
+                <label for="group3">DW103</label>
+                <input  onclick="  validateInputs()" id="group3" name="group" type="radio"><br>
+                <label for="group4">DM101</label>
+                <input  onclick="  validateInputs()" id="group4" name="group" type="radio">
+                <label for="group5">DM102</label>
+                <input onclick="  validateInputs()"  id="group5" name="group" type="radio">
+                <div id="error2"></div>
+            </div>
+            <!-- select -->
+            <div class="input-control2">
+                <label for="select">Club(s)</label>
+                <select onclick="  validateInputs()"  multiple name="select" id="select">Club(s)
+                    <option value="">Informatique</option>
+                    <option value="">Robotique</option>
+                    <option value=""> Jeu d'échecs</option>
+                    <option value="">Musique</option>
+                    <option value="">Foot</option>
+                    <option value="">Théatre</option>
+                </select >
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script defer src="./script.js"></script>
+</body>
+</html>
